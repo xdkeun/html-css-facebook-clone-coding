@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins', sans-serif;
+}
+body{
+    background:#efefef;
+
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background: #1876f2;
+    padding:5px 5%; /*상하 좌우*/
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    width:160px;
+    margin-right:45px;
+}
+
+.nav-left, .nav-right{
+    display:flex;
+    align-items:center;
+}
+
+.nav-left ul li {
+    list-style:none;
+    display:inline-block;
+}
+
+.nav-left ul li img{
+    width:28px;
+    margin:0 15px;
+}
+
+.nav-user-icon img{
+    width:40px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.search-box{
+    background:#efefef;
+    width:350px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    padding:0 15px;
+}
+
+.search-box img{
+    width:18px;
+}
+
+.search-box input{
+    width:100%;
+    background:transparent; /*투명*/
+    padding:10px;
+    outline:none;
+    border:0;
+}
+
+.nav-user-icon {
+    margin-left:30px;
+}
+
+.online{
+    position:relative; /*부모*/
+}
+
+.online::after{ /*선택한 요소의 맨 마지막 자식으로 의사 요소를 하나 생성*/
+/*단일 콜론 : 동적이거나 유동적이면서 어떤 요소의 전체에 영향을 줄 때 사용
+ex) :hover는 어떤 요소에 마우스를 갖다댈 때만 작동하는 것이므로 동적이라 할 수 있고,
+그 적용 범위는 해당 요소 전체에 영향을 줌
+이중 콜론 :: 정적이면서 어떤 요소의 일부분에 영향을 줄 때 사용
+ex) ::before는 어떤 요소 내부의 앞에 글자나 그림을 삽입할 때 사용하므로 해당 요소의 일부분만 영향을 받게 됨
+이중 콜론 :: 가상의 요소를 생성하여 선택하는 것*/
+    content:'';
+    width:7px;
+    height:7px;
+    border:2px solid #fff;
+    border-radius:50%;
+    background: #41db51;
+    position:absolute; /*부모를 기준으로 배치됨 자식이라고 보면 됨*/
+    top:0; /*부모 위치를 기준으로 얼마만큼 떨어질지 결정*/
+    right:0; /*부모 위치를 기준으로 얼마만큼 떨어질지 결정*/
+}
+
+.container{
+    display:flex;
+    justify-content:space-between;
+    padding:13px 5%;
+}
+
+.left-sidebar{
+    /* background: #cbdffa; */
+    flex-basis:25%;
+    position:sticky;
+    top:70px;
+    align-self:flex-start;
+    /* height:100vh; */
+}
+
+.right-sidebar{
+    /* background: #cbdffa; */
+    flex-basis:25%;
+    position:sticky;
+    top:70px;
+    align-self:flex-start;
+    /* height:100vh; */
+}
+
+.main-content{
+    flex-basis:47%;
+}
+
+.imp-links a{
+    text-decoration: none;
+    display:flex;
+    align-items:center;
+    margin-bottom:30px;
+    color:#626262;
+    width:fit-content;
+}
+
+.imp-links a img{
+    width:25px;
+    margin-right:15px;
+}
+
+/* 34m 50s */
